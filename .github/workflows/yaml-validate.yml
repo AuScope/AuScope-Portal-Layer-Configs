@@ -1,0 +1,25 @@
+name: YAML Validation
+
+on:
+  pull_request:
+    branches:
+      - AuScopePortalProd
+  
+  push:
+    branches:
+      - '**'
+      - '!AuScopePortalProd'
+
+jobs:
+  validate-yaml:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install yamllint
+        run: pip install yamllint
+
+      - name: Validate YAML files
+        run: yamllint -c .yamllint.yaml .
