@@ -32,6 +32,10 @@ jobs:
 
             az account set --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
-            echo "Restarting PROD container app: ${{ secrets.AZURE_PRODCONTAINERNAME }}"
+            echo "Getting latest revision for: ${{ secrets.AZURE_PRODCONTAINERNAME }}"
 
-            az containerapp revision restart --name ${{ secrets.AZURE_PRODCONTAINERNAME }} --resource-group ${{ secrets.AZURE_PRODRG }}
+            revname=$(az containerapp revision list -n ${{ secrets.AZURE_PRODCONTAINERNAME }} -g ${{ secrets.AZURE_PRODRG }} --query "sort_by(@, &properties.createdTime)[-1].name" -o tsv)
+
+            echo "Restarting revision: $revname"
+
+            az containerapp revision restart --revision $revname -g ${{ secrets.AZURE_PRODRG }}
