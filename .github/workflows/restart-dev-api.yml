@@ -1,0 +1,43 @@
+name: restart-dev-api
+
+on:
+  push:
+    branches:
+      - AuScopePortalDev
+
+permissions:
+  id-token: write
+  contents: read
+  packages: write
+
+jobs:
+
+  push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      
+      - name: Azure CLI script
+        uses: azure/CLI@v2
+        with:
+          azcliversion: latest
+          inlineScript: |
+            set -e
+
+            az account set --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+            echo "Getting latest revision for: ${{ secrets.AZURE_DEVCONTAINERNAME }}"
+
+            revname=$(az containerapp revision list -n ${{ secrets.AZURE_DEVCONTAINERNAME }} -g ${{ secrets.AZURE_DEVRG }} --query "sort_by(@, &properties.createdTime)[-1].name" -o tsv)
+
+            echo "Restarting revision: $revname"
+
+            az containerapp revision restart --revision $revname -g ${{ secrets.AZURE_DEVRG }}
+
