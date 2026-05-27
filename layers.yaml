@@ -213,11 +213,11 @@
                 - "Magnetotelluric surveys in Victoria"
                 - "Magnetotelluric surveys in Western Australia"
 
-# 3D Geological Models
+# 3D Geoscience Models
 "portal-geo-models":
-        name: "3D Geological Models"
+        name: "3D Geoscience Models"
         group: "Models"
-        description: "Various Geological Models"
+        description: "Various geoscientific models sourced from Australian geological surveys and universities"
         csw:
             keywords:
                 - "3D Geological Models"
