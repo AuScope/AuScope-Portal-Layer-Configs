@@ -2422,3 +2422,10 @@
                     - [ "countSum (less than)", "nmm:countsum",null, "SMALLER_THAN" ]
                polygonbox:
                     - [ "Polygon BBox - Clipboard", "nmm:shape", null, "ISEQUAL" ]        
+
+"ama:MineWasteGeochem":
+    name: "Mine Waste - Geochemistry"
+    description: "This layer delivers geochemical analytical data for samples collected from Australian mine waste sites including tailings, wastes from mineral excavation, slag, fly ash and related mine waste materials. The mineral deposit models used in this layer are modified from the Critical Mineral Mapping Initiative mineral deposit classification scheme (Hofstra et al., 2021). Geoscience Australia partnered with researchers at the Sustainable Minerals Institute at The University of Queensland and the School of Engineering at RMIT University to combine world-class mineral systems understanding with world-leading mine waste research to provide vital data on critical minerals and strategic materials concentrations in mine waste, forming the foundation for secondary resource potential. The layer has been produced in collaboration with the Geological Survey of Queensland, the Geological Survey of New South Wales, the Northern Territory Geological Survey, the Geological Survey of Victoria, the Geological Survey of South Australia, the Geological Survey of Western Australia and Mineral Resources Tasmania."
+    group: "Geochemistry"
+    wms:
+        selector: "ama:MineWasteGeochem"
