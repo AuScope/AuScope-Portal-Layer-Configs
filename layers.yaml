@@ -1139,135 +1139,164 @@
     wfs:
         selector: "mrtwfs:BoreholeTrace"
 
-# NSW Geological Survey
+# NSW Geological Survey - geochemistry and field observations
 "nsw-assay-surface":
-    name: "NSW Assay Surface"
+    name: "NSW Surface Geochemistry Assay"
     group: "Geochemistry"
-    description: "This dataset contains geochemical assay data collected by companies exploring in"
+    description: "NSW surface assay geochemistry"
     supportsCsvDownloads: true
     wfs:
-        selector: "gsnsw:dw_surfassay"
+        selector: "geochemistry:geochemistry_assay_surface"
 "nsw-field-observations":
-    hidden: true
-    name: "NSW Field Observations"
-    group: "Field Observations"
-    description: "The Field Observations (FieldObs) database stores observations and measurements of rocks collected by the Geological Survey of NSW. Includes location information, stratigraphic unit, links to mineral occurrence and drill hole data, photo and sketch captions, structural measurements and observations, lithology and rock descriptions, sample collection information, and petrophysical measurements (magnetic susceptibility, radioelement and density)."
-    supportsCsvDownloads: true
-    wfs:
-        selector: "gsnsw:dw_fieldobs_full"
-"nsw-downhole-assay-samples":
-    name: "NSW Downhole Assay Samples"
-    group: "Geochemistry"
-    description: "Drillhole sample geochemistry that has been reported by title holders to the department as part of the mineral exploration reporting requirements. The data is provided annually in the form of exploration data files and stored with the relevant tenement report in DIGS. Data mining of digital exploration data files stored in DIGS is largely complete for the period 2001 to present. Data mining continues for DIGS reports earlier than 2001 using OCR (optical character recognition) software to convert raster data into digital files for loading. Validation of data is an ongoing process. Data available to the public and industry is restricted to DIGS open file reports."
-    supportsCsvDownloads: true
-    wfs:
-        selector: "gsnsw:dw_assayhole"
-"nsw-geological-field-observations":
     name: "NSW Geological Field Observations"
     group: "Field Observations"
-    description: "The Field Observations (FieldObs) database stores observations and measurements of rocks collected by the Geological Survey of NSW. Includes location information, stratigraphic unit, links to mineral occurrence and drill hole data, photo and sketch captions, structural measurements and observations, lithology and rock descriptions, sample collection information, and petrophysical measurements (magnetic susceptibility, radioelement and density)."
+    description: "NSW geological field observations"
     supportsCsvDownloads: true
     wfs:
-        selector: "gsnsw:dw_fieldobs"
-"nsw-mineral-occurrence-industry":
-    name: "NSW Mineral Occurrence Industry"
-    group: "Earth Resources"
-    description: "This spatial dataset is a derivative product of the New South Wales Mineral Occurence Database (also known as New South Wales MetIndEx). It records over 31,000 known mineral occurrences throughout NSW. These records have been compiled from resource and production data compiled from both historic and current mining operations records held by the Geological Survey of NSW"
+        selector: "field-observations:field_observations"
+"nsw-downhole-assay-samples":
+    name: "NSW Drilling Geochemistry Assay"
+    group: "Geochemistry"
+    description: "NSW drilling assay geochemistry"
     supportsCsvDownloads: true
     wfs:
-        selector: "gsnsw:dw_metindustry"
-"nsw-geological-field-observations-photo":
-    name: "NSW Geological Field Observations Photo"
-    group: "Field Observations"
-    description: "The Field Observations (FieldObs) database stores observations and measurements of rocks collected by the Geological Survey of NSW. Includes location information, stratigraphic unit, links to mineral occurrence and drill hole data, photo and sketch captions, structural measurements and observations, lithology and rock descriptions, sample collection information, and petrophysical measurements (magnetic susceptibility, radioelement and density)."
+        selector: "geochemistry:geochemistry_assay_drillhole"
+"nsw-geochemistry-isotope":
+    name: "NSW Isotope Geochemistry and Geochronology Samples"
+    group: "Geochronology"
+    description: "NSW isotope geochemistry and geochronology samples"
     supportsCsvDownloads: true
     wfs:
-        selector: "gsnsw:dw_photo"
-"nsw-curr-mini-and-expl-titl":
-    name: "NSW Current Mining And Exploration Titles"
-    group: "Tenements"
-    description: "Areas in NSW where a company or individual has the right to explore for or extract resources including petroleum, minerals and coal. All current titles for mineral and energy resource exploration, assessment and production."
+        selector: "geochemistry:geochemistry_isotope"
+"nsw-geochemistry-hydrogeochemistry":
+    name: "NSW Hydrogeochemistry Samples"
+    group: "Geochemistry"
+    description: "NSW whole rock hydrogeochemistry"
     supportsCsvDownloads: true
     wfs:
-        selector: "gsnsw:bl_title"
-"nsw-geological-spectral-samples":
-    name: "NSW Geological Spectral Samples"
+        selector: "geochemistry:geochemistry_whole_rock_hydro"
+"nsw-geochemistry-drillhole":
+    name: "NSW Drillhole Geochemistry - Whole Rock"
+    group: "Geochemistry"
+    description: "NSW whole rock drillhole geochemistry"
+    supportsCsvDownloads: true
+    wfs:
+        selector: "geochemistry:geochemistry_whole_rock_drillhole"
+
+# NSW Geological Survey - Boreholes
+"nsw-all-drillholes":
+    name: "NSW All Drillholes"
     group: "Boreholes"
-    description: "In-hole Spectral Samples taken by Geological Survey of NSW"
+    description: "NSW drillholes, including coal seam gas, minerals, petroleum and stratigraphic test wells"
     supportsCsvDownloads: true
     wfs:
-        selector: "gsnsw:dw_spectral"
+        selector: "drilling:drilling_drillholes"
+"nsw-hylogger-boreholes":
+    name: "NSW Hylogger Drillholes"
+    group: "Boreholes"
+    description: "NSW drillholes with hylogger data"
+    supportsCsvDownloads: true
+    wfs:
+        selector: "drilling:drilling_drillholes_hyperspectral"
+
+# NSW Geological Survey - Mineral Occurrences
+"nsw-mineral-occurrence-industry":
+    name: "NSW Mineral Occurrence Operating Mine"
+    group: "Earth Resources"
+    description: "NSW mineral occurrence operating mines"
+    supportsCsvDownloads: true
+    wfs:
+        selector: "mineral-occurrence:mineral_occurrence_operating_mines"
+"nsw-mineral-occurrence-commodity":
+    name: "NSW Minerals Deposit Class"
+    group: "Earth Resources"
+    description: "NSW mineral occurrence deposit class"
+    supportsCsvDownloads: true
+    wfs:
+        selector: "mineral-occurrence:mineral_occurrence_deposit_class"
+
+# NSW Geological Survey - Titles
+"nsw-titles-mineral-allocation-areas":
+    name: "NSW Titles - Mineral Allocation Areas"
+    group: "Tenements"
+    description: "NSW administrative mineral allocation areas"
+    supportsCsvDownloads: true
+    wfs:
+        selector: "mining-and-exploration:admin_mineral_allocation_areas"
+"nsw-titles-applications":
+    name: "NSW Titles - Applications"
+    group: "Tenements"
+    description: "NSW title applications"
+    supportsCsvDownloads: true
+    wfs:
+        selector: "mining-and-exploration:titles_title_applications"
+"nsw-titles-ancilliary-mining-areas":
+    name: "NSW Titles - Ancillary Mining Areas"
+    group: "Tenements"
+    description: "NSW ancillary mining areas"
+    supportsCsvDownloads: true
+    initialBBox:
+        - [ 150.77,-32.5,151.2,-32.22 ]
+    wfs:
+        selector: "mining-and-exploration:titles_ancillary_mining_areas"
+"nsw-titles-granted":
+    name: "NSW Titles - Titles Granted"
+    group: "Tenements"
+    description: "NSW titles granted"
+    supportsCsvDownloads: true
+    wfs:
+        selector: "mining-and-exploration:titles_title_granted"
+"nsw-titles-historic":
+    name: "NSW Titles - Historic Titles"
+    group: "Tenements"
+    description: "NSW historic titles"
+    supportsCsvDownloads: true
+    wfs:
+        selector: "mining-and-exploration:titles_title_historic"
+
+# NSW Geological Survey - selected Geophysics
 "geop-tern-radi-pota":
-    name: "NSW Ternary Radioelement K/Th/U"
+    name: "NSW Ternary Radioelement K/Th/U 25m"
     group: "Geophysics"
-    description: "This dataset is part of the Geological Survey NSW Geophysics dataset series. Ternary radioelement potassium(K)-thorium(Th)-uranium(U) channel data. The image was generated by merging many individual airborne surveys and is a red-green-blue (RGB) composite using a histogram-equalised colour-stretch for each of the three channels. The red, green and blue channels represent K, Th and U respectively. Mixed compositions are indicated by the proportional blend of the corresponding additive primary colours (e.g. yellow indicates the presence of both K and Th, magenta the presence of K and U while aqua indicates the presence of Th and U). Black indicates low concentrations and white represents high concentrations for all three radioelements. The distribution of radioelements reflects the geochemistry and mineralogy of the near-surface, which may constitute either bedrock or regolith materials. The NSW statewide grid DVD set includes K values in percent(%), Th values in parts per million (ppm) and U values in parts per million (ppm)."
+    description: "NSW Ternary Radioelement K/Th/U 25m"
     supportsCsvDownloads: false
     wms:
-        selector: "geophys:Radio"
-"nsw-current-mining-applications":
-    name: "NSW Current Mining Applications"
-    group: "Tenements"
-    description: "All current applications for mineral and energy resource exploration, assessment and production titles."
-    supportsCsvDownloads: true
-    wfs:
-        selector: "gsnsw:bl_titleappl"
-"nsw-operating-mineral-mines":
-    name: "NSW Operating Mineral Mines"
-    group: "Tenements"
-    description: "Major operating mines in NSW, including locations, names and the resource being mined."
-    supportsCsvDownloads: true
-    wfs:
-        selector: "gsnsw:dw_opmines"
-"nsw-geochronology":
-    name: "NSW Geochronology"
-    group: "Geochronology"
-    description: "The radiogenic isotope database contains geochronological data managed by the Ge"
-    supportsCsvDownloads: true
-    wfs:
-        selector: "gsnsw:dw_geochron"
+        selector: "geophys-imagery-statewide:geophys-rad-kthu-25m"
 "geophysics-isostatic-bouger-gravity":
     name: "NSW Isostatic Bouger Gravity"
     group: "Geophysics"
-    description: "This dataset is part of the Geological Survey NSW Geophysics dataset series.  Is"
+    description: "NSW isostatic bouger gravity"
     supportsCsvDownloads: false
     wms:
-        selector: "geophys:IsoGrav"
-"nsw-geochemistry-samples":
-    name: "NSW Geochemistry Samples"
-    group: "Geochemistry"
-    description: "The Geochemistry Whole Rock) dataset contains information about the chemistry o"
-    supportsCsvDownloads: true
-    wfs:
-        selector: "gsnsw:dw_geochemistry"
+        selector: "geophys-imagery-statewide:geophys-grav-air-isostatic"
 "geop-isos-grav-over-tmi-rtp-tilt":
     name: "NSW Isostatic Gravity Over Tmi Rtp Tilt"
     group: "Geophysics"
-    description: "This dataset is part of the Geological Survey NSW Geophysics dataset series.  Bo"
+    description: "NSW isostatic gravity over TMI RTP tilt"
     supportsCsvDownloads: false
     wms:
-        selector: "geophys:IsoGravTilt"
-"nsw-mineral-occurrence-commodity":
-    name: "NSW Mineral Occurrence Commodity"
-    group: "Earth Resources"
-    description: "This spatial dataset is a derivative product of the New South Wales Mineral Occu"
-    supportsCsvDownloads: true
-    wfs:
-        selector: "gsnsw:dw_metelement"
+        selector: "geophys-imagery-statewide:geophys-grav-air-isostatic-on-tilt-mag"
 
-# Geological Provinces
+# Geological Provinces - NSW and GA
 "geological-provinces":
     name: "Geological Provinces"
     description: "Geological Provinces provided by GA"
     group: "Boundaries"
     supportsCsvDownloads: true
-    wmswfs:
-         featureName: "gml:ProvinceFullExtent"
-         layerName: "GeologicalProvinces"
+    wms:
+        layerName: "GeologicalProvinces"
     filters:
         textbox: 
             - [ "Name", "NAME", null, "ISLIKE" ]
         polygonbox:
             - ["Polygon BBox", "the_geom", null, "ISEQUAL" ]
+"nsw-geological-provinces":
+    name: "NSW Geology - Provinces and Basins"
+    description: "NSW Geology - Provinces and Basins"
+    group: "Boundaries"
+    supportsCsvDownloads: true
+    wms:
+        layerName: "geology-misc:geology_provinces_basins"
  
 # Octopus CRN Australia
 "Octopus-Crn-Aus-Basins":
