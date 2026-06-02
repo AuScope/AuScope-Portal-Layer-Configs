@@ -1283,7 +1283,8 @@
     description: "Geological Provinces provided by GA"
     group: "Boundaries"
     supportsCsvDownloads: true
-    wms:
+    wmswfs:
+        featureName: "gml:ProvinceFullExtent"
         layerName: "GeologicalProvinces"
     filters:
         textbox: 
@@ -1296,7 +1297,7 @@
     group: "Boundaries"
     supportsCsvDownloads: true
     wms:
-        layerName: "geology-misc:geology_provinces_basins"
+        selector: "geology-misc:geology_provinces_basins"
  
 # Octopus CRN Australia
 "Octopus-Crn-Aus-Basins":
