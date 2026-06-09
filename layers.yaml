@@ -869,7 +869,7 @@
     initialBBox:
         - [ 140.0,-38.5,151.0,-34.5 ]
     wms:
-        selector: "erdd:GSV_SG_250K_GEOLUNIT"
+        selector: "gsv:GSV_SG_250K_GEOLUNIT"
 "gsv-geological-unit-contact-250k-":
     name: "Vic Geological Unit Contact 250K"
     group: "Geological Maps"
@@ -877,7 +877,7 @@
     supportsCsvDownloads: false
     previewImg: "https://drdzuf3dxzz1h.cloudfront.net/preview/GSV_Geological_Unit_Contact_(250k).png"
     wms:
-        selector: "erdd:GSV_SG_250K_GEOLUNITCONTACT"
+        selector: "gsv:GSV_SG_250K_GEOLUNITCONTACT"
 "gsv-geological-unit-contact-50k-":
     name: "Vic Geological Unit Contact 50K"
     group: "Geological Maps"
@@ -885,7 +885,7 @@
     supportsCsvDownloads: false
     previewImg: "https://drdzuf3dxzz1h.cloudfront.net/preview/GSV_Geological_Unit_Contact_(50k).png"
     wms:
-        selector: "erdd:GSV_SG_50K_GEOLUNITCONTACT"
+        selector: "gsv:GSV_SG_50K_GEOLUNITCONTACT"
 "gsv-geological-unit-250k-age":
     name: "Vic Geological Unit 250K Age"
     group: "Geological Maps"
@@ -893,7 +893,7 @@
     supportsCsvDownloads: false
     previewImg: "https://drdzuf3dxzz1h.cloudfront.net/preview/GSV_Geological_Unit_(250k)_Age.png"
     wms:
-        selector: "erdd:GSV_SG_250K_GEOLUNIT_AGE"
+        selector: "gsv:GSV_SG_250K_GEOLUNIT_AGE"
 "gsv-shear-displacement-structure-250k-":
     name: "Vic Shear Displacement Structure 250K"
     group: "Geological Maps"
@@ -901,7 +901,7 @@
     supportsCsvDownloads: false
     previewImg: "https://drdzuf3dxzz1h.cloudfront.net/preview/GSV_Shear_Displacement_Structure_(250K).png"
     wms:
-        selector: "erdd:GSV_SG_250K_SHEARDISPSTRUCTURE"
+        selector: "gsv:GSV_SG_250K_SHEARDISPSTRUCTURE"
 "gsv-geological-unit-250k-lithology":
     name: "Vic Geological Unit 250K Lithology"
     group: "Geological Maps"
@@ -909,7 +909,7 @@
     supportsCsvDownloads: false
     previewImg: "https://drdzuf3dxzz1h.cloudfront.net/preview/GSV_Geological_Unit_(250k)_Lithology.png"
     wms:
-        selector: "erdd:GSV_SG_250K_GEOLUNIT_LITHOLOGY"
+        selector: "gsv:GSV_SG_250K_GEOLUNIT_LITHOLOGY"
 "gsv-geological-unit-50k-lithology":
     name: "Vic Geological Unit 50K Lithology"
     group: "Geological Maps"
@@ -917,7 +917,7 @@
     supportsCsvDownloads: false
     previewImg: "https://drdzuf3dxzz1h.cloudfront.net/preview/GSV_Geological_Unit_(50k)_Lithology.png"
     wms:
-        selector: "erdd:GSV_SG_50K_GEOLUNIT_LITHOLOGY"
+        selector: "gsv:GSV_SG_50K_GEOLUNIT_LITHOLOGY"
 "gsv-geological-unit-50k-":
     name: "Vic Geological Unit 50K"
     group: "Geological Maps"
@@ -925,9 +925,9 @@
     supportsCsvDownloads: false
     previewImg: "https://drdzuf3dxzz1h.cloudfront.net/preview/VIC_GSV_Geological_Unit_(50k).png"
     initialBBox:
-        - [ 143.5,-38.5,144.5,-38.2 ]
+        - [ 143.9,-38.35,144.0,-38.28 ]
     wms:
-        selector: "erdd:GSV_SG_50K_GEOLUNIT"
+        selector: "gsv:GSV_SG_50K_GEOLUNIT"
 "gsv-shear-displacement-structure-50k-":
     name: "Vic Shear Displacement Structure 50K"
     group: "Geological Maps"
@@ -935,7 +935,7 @@
     supportsCsvDownloads: false
     previewImg: "https://drdzuf3dxzz1h.cloudfront.net/preview/GSV_Shear_Displacement_Structure_(50K).png"
     wms:
-        selector: "erdd:GSV_SG_50K_SHEARDISPSTRUCTURE"
+        selector: "gsv:GSV_SG_50K_SHEARDISPSTRUCTURE"
 "gsv-geological-unit-50k-age":
     name: "Vic Geological Unit 50K Age"
     group: "Geological Maps"
@@ -943,7 +943,7 @@
     supportsCsvDownloads: false
     previewImg: "https://drdzuf3dxzz1h.cloudfront.net/preview/GSV_Geological_Unit_(50k)_Age.png"
     wms:
-        selector: "erdd:GSV_SG_50K_GEOLUNIT_AGE"
+        selector: "gsv:GSV_SG_50K_GEOLUNIT_AGE"
 
 # GA Reports
 "l180-mt-isa-deep-crus-seis-surv-qld-2006-stac-and-migr-data-and-imag-for-line-06ga-to-06ga":
