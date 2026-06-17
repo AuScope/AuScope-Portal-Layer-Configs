@@ -2346,7 +2346,7 @@
     wms:
         selector: "rad_rgb"
 "sa-rad-rgb-lns":
-    name: "SA Radiometry Ternary KThU RGB"
+    name: "SA Radiometry Ternary LNS KThU RGB"
     description: "South Australia State Radiometry Potassium-Thorium-Uranium (KThU) Log Normalised Scaled Ternary RGB"
     group: "Geophysics"
     wms:
