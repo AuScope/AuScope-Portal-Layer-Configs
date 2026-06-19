@@ -2073,6 +2073,9 @@
     csw:
         ids:
             - "d77d9a25-40a4-454b-991c-58e4c1e8bcbb"
+    initialBBox:
+        - [ 115.35,-32.6,117.35,-31.6 ]
+
 "sand-and-gravel-sample-analyses":
     name: "WA Sand and Gravel Sample Analyses"
     group: "Soil Chemistry"
