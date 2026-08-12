@@ -1839,6 +1839,13 @@
     supportsCsvDownloads: true
     wms:
         selector: "auscope:States-and-Territories"
+"ntd_register_nat":
+    name: "Native Title Determinations - National Native Title Register"
+    group: "Boundaries"
+    description: "Native Title Determinations Register published through the Australian Government data.gov.au GeoServer OGC Web Map Service (WMS)."
+    supportsCsvDownloads: false
+    wms:
+        selector: "ckan_ecdbbb6c_c374_4649_9cd3_0677f44182c9"
 
 # GA Magnetotellurics
 "msl-new-magnetotellurics":
