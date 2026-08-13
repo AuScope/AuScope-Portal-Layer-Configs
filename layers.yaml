@@ -1971,6 +1971,13 @@
         polygon_geojson:  [[146.26, -10.53], [132.45, -8.23], [111.64, -17.61], [110.29, -34.29], [147.95, -45.25], [159.37, -24.57], [146.26, -10.53]]
         apikey: "_7AyXpOSiefzoaCbUaPOM"
         maps: "territories"
+"ntd_register_nat":
+    name: "Native Title Determinations - National Native Title Register"
+    group: "Indigenous Data"
+    description: "Native Title Determinations Register published through the Australian Government data.gov.au GeoServer OGC Web Map Service (WMS)."
+    supportsCsvDownloads: false
+    wms:
+        selector: "ckan_ecdbbb6c_c374_4649_9cd3_0677f44182c9"
 
 "regolith-depth-layer":
     name: "Depth of Regolith - Soil and Landscape Grid National Soil Attribute Maps"
