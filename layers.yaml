@@ -2432,3 +2432,57 @@
     group: "Geochemistry"
     wms:
         selector: "ama:MineWasteGeochem"
+
+# Reports -> MRT Document Index
+"mrt-document-index": 
+    name: "MRT Document Index"
+    description: "An index of documents held in the TasExplor and DomInfo document catalogues with the TIGER (Tasmanian Information on Geoscience and Exploration Resources) system."
+    group: "Reports"
+    supportsCsvDownloads: true
+    wfs:
+       selectore: "mrtwfs:DocumentIndex"
+
+# Geological Maps ->Tas Statewide Map Index
+"Tas-Statewide-Map-Index":
+    name: "Tas Statewide Map Index"
+    description: "Tas Statewide Map Index"
+    group: "Geological Maps"
+    supportsCsvDownloads: true
+    wfs:
+        selector: "mrtwfs:StateWideMapsIndex"
+
+# Geological Maps -> Tas 1:250000 Geology Map Index
+"Tas-250000-Geology-Map-Index":
+    name: "Tas 1:250000 Geology Map Index"
+    description: "Tas 1:250000 Geology Map Index"
+    group: "Geological Maps"
+    supportsCsvDownloads: true
+    wfs:
+        selector: "mrtwfs:Geology250kIndex"
+
+# Geological Maps -> Tas1:25000 Geology Map Index
+"Tas-25000-Geology-Map-Index":
+    name: "Tas 1:25000 Geology Map Index"
+    description: "Tas 1:25000 Geology Map Index"
+    group: "Geological Maps"
+    supportsCsvDownloads: true
+    wfs:
+        selector: "mrtwfs:Geology25kIndex"
+
+# Geological Maps -> Tas 1:50000 and 1:63360 Geology Map Index
+"Tas-50000-Geology-Map-Index":
+    name: "Tas 1:50000 and 1:63360 Geology Map Index"
+    description: "Tas 1:50000 and 1:63360 Geology Map Index"
+    group: "Geological Maps"
+    supportsCsvDownloads: true
+    wfs:
+        selector: "mrtwfs:Geology50kIndex"
+
+# Models -> Tas Published 3D Models
+"Tas-Published-3D-Model":
+    name: "Tas Published 3D Models"
+    description: "Tas Published 3D Models"
+    group: "Models"
+    supportsCsvDownloads: true
+    wfs:
+        selector: "mrtwfs:Published3DModels"
