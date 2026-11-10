@@ -859,7 +859,7 @@
         endPoints: 
             - "http://remanentanomalies.csiro.au/thredds/wms/Emag2/EMAG2.nc"
  
- "layer-122531":
+"layer-122531":
     name: "Remanent Anomalies XT"
     description: "These features describe the existence, location and associated metadata of anomalies identified from Magnetic Anomaly Map of Australia (fifth edition), Geoscience Australia and other sources"
     group: "Magnetics"
