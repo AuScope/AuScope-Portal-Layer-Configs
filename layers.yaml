@@ -864,7 +864,12 @@
     group: "Magnetics"
     wmts:
         selector: "layer-122531"
-
+"layer-124925":
+    name: "AutoSearch Anomalies XT"
+    description: "Anomalies found via the automatic AutoSearch Anomalies application."
+    group: "Magnetics"
+    wmts:
+        selector: "layer-124925"
 # Victorian Geology Maps, WFS is not available
 "gsv-geological-unit-250k-":
     name: "Vic Geological Unit 250K"
