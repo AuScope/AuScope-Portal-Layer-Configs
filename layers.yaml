@@ -2242,7 +2242,7 @@
     description: "The Field Observation (SAGeodata - Module) comprises of the mapping and field work observations held by the Geological Survey of South Australia, including Field Notes, Lithology, Structure and Sample Information."
     supportsCsvDownloads: true
     wfs:
-        selector: "sampling_analyses:geochronology"
+        selector: "geology:field_observation_sites"
 "sa-downhole-geochem-zinc":
     name: "SA Max Downhole Geochem Zinc"
     group: "Geochemistry"
