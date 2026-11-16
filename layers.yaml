@@ -2229,13 +2229,6 @@
     supportsCsvDownloads: true
     wfs:
         selector: "geology:surface_geology_7m"
-"sa-geochronology":
-    name: "SA Geochronology"
-    group: "Geochronology"
-    description: "Radiogenic and stable isotope geochronology and geochemistry are used to determine the age and origins of rocks and minerals. The data provides information about rock relationships, and the timing of geological events."
-    supportsCsvDownloads: true
-    wfs:
-        selector: "sampling_analyses:geochronology"
 "sa-field-observation-sites":
     name: "SA Field Observation Sites"
     group: "Field Observations"
