@@ -2233,20 +2233,13 @@
     supportsCsvDownloads: true
     wfs:
         selector: "geology:surface_geology_7m"
-"sa-geochronology":
-    name: "SA Geochronology"
-    group: "Geochronology"
-    description: "Radiogenic and stable isotope geochronology and geochemistry are used to determine the age and origins of rocks and minerals. The data provides information about rock relationships, and the timing of geological events."
-    supportsCsvDownloads: true
-    wfs:
-        selector: "sampling_analyses:geochronology"
 "sa-field-observation-sites":
     name: "SA Field Observation Sites"
     group: "Field Observations"
     description: "The Field Observation (SAGeodata - Module) comprises of the mapping and field work observations held by the Geological Survey of South Australia, including Field Notes, Lithology, Structure and Sample Information."
     supportsCsvDownloads: true
     wfs:
-        selector: "sampling_analyses:geochronology"
+        selector: "geology:field_observation_sites"
 "sa-downhole-geochem-zinc":
     name: "SA Max Downhole Geochem Zinc"
     group: "Geochemistry"
