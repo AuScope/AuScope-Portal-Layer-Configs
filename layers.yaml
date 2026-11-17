@@ -2146,6 +2146,8 @@
     csw:
         ids:
             - "d73d2881-e518-4311-8373-423b5bc8d7ae"
+    initialBBox:     
+        - [ 135.05,-37.15,145.47,-31.84 ]
 
 "gippsland-murray-basin-dts-study":
     name: "Gippsland and Murray Basin Fiber Optic DTS Study"
@@ -2164,6 +2166,8 @@
     csw:
         ids:
             - "70e0b9ef-a26a-4eaf-bf0e-6777556279f2"
+    initialBBox: 
+        - [ 145.70,-33.65,154.37,-29.07 ]
 
 "qld-gravity-image":
     name: "Queensland Gravity Image"
