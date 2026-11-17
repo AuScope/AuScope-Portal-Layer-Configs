@@ -2483,27 +2483,3 @@
     supportsCsvDownloads: true
     wfs:
         selector: "mrtwfs:Published3DModels"
-
-# Lola Test
-"Lola-test":
-   name: "Lola Test"
-   description: "Lola Test description"
-   group: "Lola Test2"
-   wfs:
-        selector: "mrtwfs:Published3DModels"
-
-# Jenny Test
-"Jenny-test":
-   name: "Jenny Test"
-   description: "Jenny Test"
-   group: "Jenny Test"
-   wfs:
-        selector: "mrtwfs:Published3DModels"
-
-# Eddie Test
-"Eddie-test":
-   name: "Eddie Test"
-   description: "Eddie Test"
-   group: "Eddie Test"
-   wfs:
-        selector: "mrtwfs:Published3DModels"
