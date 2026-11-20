@@ -813,52 +813,24 @@
             - "f2150_3654_7441_8491"
 
 # Magnetics
-"remanent-anomalies":
-    name: "AUS5 - Remanent Anomalies"
-    description: "A collection of services publishing magnetic anomalies"
-    group: "Magnetics"
-    supportsCsvDownloads: true
-    wfs:
-        selector: "RemAnom:Anomaly"
-        endPoints:
-            - "https://remanentanomalies.csiro.au/geoserver/wfs"
-    filters:
-        textbox: 
-            - [ "Remanent Anomaly Name", "RemAnom:AnomalyName", null, "ISLIKE" ]
-"remanent-anomalies-AutoSearch":
-    name: "AUS5 - AutoSearch Anomalies"
-    description: "A collection of CSIRO services publishing magnetic anomalies"
-    group: "Magnetics"
-    supportsCsvDownloads: true
-    wfs:
-        selector: "RemAnomAutoSearch:AutoSearchAnomalies"
-"remanent-anomaliesTMI":
-    name: "AUS5 - Total Magnetic Intensity"
-    description: "From a collection of CSIRO services publishing magnetic anomalies. This layer represents total magnetic intensities."
-    group: "Magnetics"
-    wms:
-        selector: "mag:australia_tmihires2a"
-"remanent-anomalies-EMAG":
-    name: "EMAG2 - Remanent Anomalies"
-    description: "A collection of CSIRO services publishing magnetic anomalies from the EMAG2 model. https://geomag.org/models/emag2.html"
-    group: "Magnetics"
-    supportsCsvDownloads: true
-    wfs:
-        selector: "RemAnom:Anomaly"
-        endPoints:
-            - "https://remanentanomalies.csiro.au/geoserverEMAG/wfs"
-    filters:
-        textbox: 
-            - [ "Remanent Anomaly Name", "RemAnom:AnomalyName", null, "ISLIKE" ]
-"remanent-anomalies-EMAGTMI":
+"layer-123819":
     name: "EMAG2 - Total Magnetic Intensity"
     description: "Total Magnetic Intensity from the EMAG2 model. https://geomag.org/models/emag2.html"
     group: "Magnetics"
-    wms:
-        selector: "z"
-        endPoints: 
-            - "http://remanentanomalies.csiro.au/thredds/wms/Emag2/EMAG2.nc"
-
+    wmts:
+        selector: "layer-123819"
+"layer-122531":
+    name: "Remanent Anomalies"
+    description: "These features describe the existence, location and associated metadata of anomalies identified from Magnetic Anomaly Map of Australia (fifth edition), Geoscience Australia and other sources"
+    group: "Magnetics"
+    wmts:
+        selector: "layer-122531"
+"layer-124925":
+    name: "AutoSearch Anomalies"
+    description: "Anomalies found via the automatic AutoSearch Anomalies application."
+    group: "Magnetics"
+    wmts:
+        selector: "layer-124925"
 # Victorian Geology Maps, WFS is not available
 "gsv-geological-unit-250k-":
     name: "Vic Geological Unit 250K"
