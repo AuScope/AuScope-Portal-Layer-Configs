@@ -1,0 +1,149 @@
+map(any(include('layer_wfs'), include('layer_wms'), include('layer_wmts'), include('layer_wmswfs'), include('layer_csw'), include('layer_iris'), include('layer_kml'), include('layer_vmf')), key=str())
+
+---
+base_layer: &base_fields
+  name: str()
+  description: str()
+  group: str()
+  supportsCsvDownloads: bool(required=False)
+  stackdriverServiceGroup: str(required=False)
+  initialBBox: list(include('bbox_item'), required=False)
+
+layer_wfs:
+  <<: *base_fields
+  proxyDownloadUrl: str(none=True, required=False)
+  proxyUrl: str(required=False)
+  proxyStyleUrl: str(required=False)
+  proxyCountUrl: str(required=False)
+  sldParam: list(include('sldParam_item'), required=False)
+  hidden: bool(required=False)
+  wfs: include('wfs')
+  filters: include('filters', required=False)
+
+layer_wms:
+  <<: *base_fields
+  previewImg: str(required=False)
+  onlineResourceOrder: list(list(str(), num()), required=False)
+  wms: include('wms')
+
+layer_wmswfs:
+  <<: *base_fields
+  supportsCsvDownloads: bool()
+  proxyDownloadUrl: str(none=True, required=False)
+  wmswfs: include('wmswfs_block')
+  filters: include('filters', required=False)
+
+layer_kml:
+  <<: *base_fields
+  legendImg: str()
+  kml: include('kml')
+
+layer_iris:
+  <<: *base_fields
+  proxyUrl: str()
+  iris: include('iris')
+
+layer_csw:
+  <<: *base_fields
+  csw: include('csw')
+
+layer_vmf:
+  <<: *base_fields
+  vmf: include('vmf')
+
+layer_wmts:
+  <<: *base_fields
+  previewImg: str(required=False)
+  wmts: include('wmts')
+
+wmts:
+  selector: str()
+
+vmf:
+  selector: str()
+  endPoint: str()
+  polygon_geojson: list(list(num(), num()))
+  apikey: str()
+  maps: str()
+
+kml:
+  selector: str()
+
+iris:
+  selector: list(str())
+
+csw:
+  serviceNames: list(str(), required=False)
+  keywords: list(str(), required=False)
+  ids: list(str(), required=False)
+
+wms:
+  selector: str(required=False)
+  featureNames: str(required=False)
+  endPoints: list(str(), required=False)
+
+wfs:
+  selector: str()
+  feature: list(str(), required=False)
+  endPoints: list(str(), required=False)
+
+wmswfs_block:
+  featureName: str()
+  layerName: str()
+
+filters:
+  textbox: list(include('textbox_item'), required=False)
+  checkbox: list(include('checkbox_item'), required=False)
+  selectlist: include('selectlist', required=False)
+  mandatorylist: include('mandatorylist_block', required=False)
+  date: list(include('date_item'), required=False)
+  dropdownremote: list(include('dropdownremote_item'), required=False)
+  polygonbox: list(include('polygon_item'), required=False)
+
+selectlist:
+  params: list(any(str(), bool(), null()), required=False)
+  options: list(list(any(str(), null())), required=False)
+
+mandatorylist_block:
+  params: list(str(), required=False)
+  options: list(list(any(str(), null())), required=False)
+
+sldParam_item:
+  - str()
+  - str()
+
+textbox_item:
+  - str()
+  - str()
+  - any(str(), null())
+  - str()
+
+checkbox_item:
+  - str()
+  - any(str(), null())
+
+date_item:
+  - str()
+  - str()
+  - any(str(), null())
+  - str()
+
+bbox_item:
+  - num()
+  - num()
+  - num()
+  - num()
+
+dropdownremote_item:
+  - str()
+  - str()
+  - any(str(), null())
+  - str()
+  - str()
+
+polygon_item:
+  - str()
+  - str()
+  - null()
+  - str()
+
