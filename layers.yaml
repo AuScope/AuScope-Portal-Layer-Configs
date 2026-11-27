@@ -2115,7 +2115,7 @@
     name: "Calperum Observatory Heat Needle Monitoring Program"
     description: "The dataset is ground temperature and thermal conductivity data recorded at the Calperum Critical Zone observatory with AuScope Heat Needle devices."
     group: "Temperature"
-    supportsCsvdownloads: false
+    supportsCsvDownloads: false
     csw:
         ids:
             - "d73d2881-e518-4311-8373-423b5bc8d7ae"
@@ -2126,7 +2126,7 @@
     name: "Gippsland and Murray Basin Fiber Optic DTS Study"
     description: "This dataset contains both raw and processed data files. The data consists of temperature-depth profiles collected from boreholes using an AP Sensing N4386B and Silixa XT-DTS Distributed Temperature Sensing (DTS) instruments. The purpose of this data collection was to conduct a comparative study between DTS and conventional thermistor-based wireline logging methods."
     group: "Temperature"
-    supportsCsvdownloads: false
+    supportsCsvDownloads: false
     csw:
         ids:
             - "3779805a-a887-4e98-ac0a-3aea733d5a87"
@@ -2410,7 +2410,7 @@
     group: "Reports"
     supportsCsvDownloads: true
     wfs:
-       selectore: "mrtwfs:DocumentIndex"
+       selector: "mrtwfs:DocumentIndex"
 
 # Geological Maps ->Tas Statewide Map Index
 "Tas-Statewide-Map-Index":
