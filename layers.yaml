@@ -813,52 +813,24 @@
             - "f2150_3654_7441_8491"
 
 # Magnetics
-"remanent-anomalies":
-    name: "AUS5 - Remanent Anomalies"
-    description: "A collection of services publishing magnetic anomalies"
-    group: "Magnetics"
-    supportsCsvDownloads: true
-    wfs:
-        selector: "RemAnom:Anomaly"
-        endPoints:
-            - "https://remanentanomalies.csiro.au/geoserver/wfs"
-    filters:
-        textbox: 
-            - [ "Remanent Anomaly Name", "RemAnom:AnomalyName", null, "ISLIKE" ]
-"remanent-anomalies-AutoSearch":
-    name: "AUS5 - AutoSearch Anomalies"
-    description: "A collection of CSIRO services publishing magnetic anomalies"
-    group: "Magnetics"
-    supportsCsvDownloads: true
-    wfs:
-        selector: "RemAnomAutoSearch:AutoSearchAnomalies"
-"remanent-anomaliesTMI":
-    name: "AUS5 - Total Magnetic Intensity"
-    description: "From a collection of CSIRO services publishing magnetic anomalies. This layer represents total magnetic intensities."
-    group: "Magnetics"
-    wms:
-        selector: "mag:australia_tmihires2a"
-"remanent-anomalies-EMAG":
-    name: "EMAG2 - Remanent Anomalies"
-    description: "A collection of CSIRO services publishing magnetic anomalies from the EMAG2 model. https://geomag.org/models/emag2.html"
-    group: "Magnetics"
-    supportsCsvDownloads: true
-    wfs:
-        selector: "RemAnom:Anomaly"
-        endPoints:
-            - "https://remanentanomalies.csiro.au/geoserverEMAG/wfs"
-    filters:
-        textbox: 
-            - [ "Remanent Anomaly Name", "RemAnom:AnomalyName", null, "ISLIKE" ]
-"remanent-anomalies-EMAGTMI":
+"layer-123819":
     name: "EMAG2 - Total Magnetic Intensity"
     description: "Total Magnetic Intensity from the EMAG2 model. https://geomag.org/models/emag2.html"
     group: "Magnetics"
-    wms:
-        selector: "z"
-        endPoints: 
-            - "http://remanentanomalies.csiro.au/thredds/wms/Emag2/EMAG2.nc"
-
+    wmts:
+        selector: "layer-123819"
+"layer-122531":
+    name: "Remanent Anomalies"
+    description: "These features describe the existence, location and associated metadata of anomalies identified from Magnetic Anomaly Map of Australia (fifth edition), Geoscience Australia and other sources"
+    group: "Magnetics"
+    wmts:
+        selector: "layer-122531"
+"layer-124925":
+    name: "AutoSearch Anomalies"
+    description: "Anomalies found via the automatic AutoSearch Anomalies application."
+    group: "Magnetics"
+    wmts:
+        selector: "layer-124925"
 # Victorian Geology Maps, WFS is not available
 "gsv-geological-unit-250k-":
     name: "Vic Geological Unit 250K"
@@ -1971,17 +1943,25 @@
         polygon_geojson:  [[146.26, -10.53], [132.45, -8.23], [111.64, -17.61], [110.29, -34.29], [147.95, -45.25], [159.37, -24.57], [146.26, -10.53]]
         apikey: "_7AyXpOSiefzoaCbUaPOM"
         maps: "territories"
+"ntd_register_nat":
+    name: "Native Title Determinations - National Native Title Register"
+    group: "Indigenous Data"
+    description: "Native Title Determinations Register published through the Australian Government data.gov.au GeoServer OGC Web Map Service (WMS)."
+    supportsCsvDownloads: false
+    wms:
+        selector: "ckan_ecdbbb6c_c374_4649_9cd3_0677f44182c9"
 
 "regolith-depth-layer":
-    name: "Depth of Regolith - Soil and Landscape Grid National Soil Attribute Maps"
-    description: "This is Version 2 of the Depth of Regolith product of the Soil and Landscape Grid of Australia (produced 2015-06-01)."
+    name: "Depth of Regolith - TERN Soil and Landscape Grid National Soil Attribute Maps"
+    description: "The Soil and Landscape Grid of Australia is a comprehensive fine spatial resolution grid of functional soil attributes and key landscape features across Australia. The landscape attributes are derived from the data collected by the Shuttle Radar Topography Mission, whilst the soil attribute surfaces are modelled from existing soils information. These surfaces provide a consistent base upon which a broad range of analyses can be conducted. This provides essential information, not previously available, that is needed for modelling and managing Australian landscapes and ecosystems."
     group: "Regolith"
-    onlineResourceOrder: 
-        - [ "DER_000_999_EV_N_P_AU_NAT_C", 1]
-        - [ "DER_000_999_95_N_P_AU_NAT_C", 2]
-        - [ "DER_000_999_05_N_P_AU_NAT_C", 3]
+    supportsCsvDownloads: false
+    onlineResourceOrder:
+        - [ "der_ev_n_p_au_nat_c_20150601", 1]
+        - [ "der_95_n_p_au_nat_c_20150601", 2]
+        - [ "der_05_n_p_au_nat_c_20150601", 3]
     wms:
-        selector: "DER_000_999_EV_N_P_AU_NAT_C"
+        selector: "der_ev_n_p_au_nat_c_20150601"
 
 # SLIP Geology and Soils
 "1-500-000-state-cenozoic-geology":
@@ -2135,16 +2115,18 @@
     name: "Calperum Observatory Heat Needle Monitoring Program"
     description: "The dataset is ground temperature and thermal conductivity data recorded at the Calperum Critical Zone observatory with AuScope Heat Needle devices."
     group: "Temperature"
-    supportsCsvdownloads: false
+    supportsCsvDownloads: false
     csw:
         ids:
             - "d73d2881-e518-4311-8373-423b5bc8d7ae"
+    initialBBox:     
+        - [ 135.05,-37.15,145.47,-31.84 ]
 
 "gippsland-murray-basin-dts-study":
     name: "Gippsland and Murray Basin Fiber Optic DTS Study"
     description: "This dataset contains both raw and processed data files. The data consists of temperature-depth profiles collected from boreholes using an AP Sensing N4386B and Silixa XT-DTS Distributed Temperature Sensing (DTS) instruments. The purpose of this data collection was to conduct a comparative study between DTS and conventional thermistor-based wireline logging methods."
     group: "Temperature"
-    supportsCsvdownloads: false
+    supportsCsvDownloads: false
     csw:
         ids:
             - "3779805a-a887-4e98-ac0a-3aea733d5a87"
@@ -2157,6 +2139,8 @@
     csw:
         ids:
             - "70e0b9ef-a26a-4eaf-bf0e-6777556279f2"
+    initialBBox: 
+        - [ 145.70,-33.65,154.37,-29.07 ]
 
 "qld-gravity-image":
     name: "Queensland Gravity Image"
@@ -2222,20 +2206,13 @@
     supportsCsvDownloads: true
     wfs:
         selector: "geology:surface_geology_7m"
-"sa-geochronology":
-    name: "SA Geochronology"
-    group: "Geochronology"
-    description: "Radiogenic and stable isotope geochronology and geochemistry are used to determine the age and origins of rocks and minerals. The data provides information about rock relationships, and the timing of geological events."
-    supportsCsvDownloads: true
-    wfs:
-        selector: "sampling_analyses:geochronology"
 "sa-field-observation-sites":
     name: "SA Field Observation Sites"
     group: "Field Observations"
     description: "The Field Observation (SAGeodata - Module) comprises of the mapping and field work observations held by the Geological Survey of South Australia, including Field Notes, Lithology, Structure and Sample Information."
     supportsCsvDownloads: true
     wfs:
-        selector: "sampling_analyses:geochronology"
+        selector: "geology:field_observation_sites"
 "sa-downhole-geochem-zinc":
     name: "SA Max Downhole Geochem Zinc"
     group: "Geochemistry"
@@ -2391,3 +2368,57 @@
     group: "Geochemistry"
     wms:
         selector: "ama:MineWasteGeochem"
+
+# Reports -> MRT Document Index
+"mrt-document-index": 
+    name: "MRT Document Index"
+    description: "An index of documents held in the TasExplor and DomInfo document catalogues with the TIGER (Tasmanian Information on Geoscience and Exploration Resources) system."
+    group: "Reports"
+    supportsCsvDownloads: true
+    wfs:
+       selector: "mrtwfs:DocumentIndex"
+
+# Geological Maps ->Tas Statewide Map Index
+"Tas-Statewide-Map-Index":
+    name: "Tas Statewide Map Index"
+    description: "Tas Statewide Map Index"
+    group: "Geological Maps"
+    supportsCsvDownloads: true
+    wfs:
+        selector: "mrtwfs:StateWideMapsIndex"
+
+# Geological Maps -> Tas 1:250000 Geology Map Index
+"Tas-250000-Geology-Map-Index":
+    name: "Tas 1:250000 Geology Map Index"
+    description: "Tas 1:250000 Geology Map Index"
+    group: "Geological Maps"
+    supportsCsvDownloads: true
+    wfs:
+        selector: "mrtwfs:Geology250kIndex"
+
+# Geological Maps -> Tas1:25000 Geology Map Index
+"Tas-25000-Geology-Map-Index":
+    name: "Tas 1:25000 Geology Map Index"
+    description: "Tas 1:25000 Geology Map Index"
+    group: "Geological Maps"
+    supportsCsvDownloads: true
+    wfs:
+        selector: "mrtwfs:Geology25kIndex"
+
+# Geological Maps -> Tas 1:50000 and 1:63360 Geology Map Index
+"Tas-50000-Geology-Map-Index":
+    name: "Tas 1:50000 and 1:63360 Geology Map Index"
+    description: "Tas 1:50000 and 1:63360 Geology Map Index"
+    group: "Geological Maps"
+    supportsCsvDownloads: true
+    wfs:
+        selector: "mrtwfs:Geology50kIndex"
+
+# Models -> Tas Published 3D Models
+"Tas-Published-3D-Model":
+    name: "Tas Published 3D Models"
+    description: "Tas Published 3D Models"
+    group: "Models"
+    supportsCsvDownloads: true
+    wfs:
+        selector: "mrtwfs:Published3DModels"
